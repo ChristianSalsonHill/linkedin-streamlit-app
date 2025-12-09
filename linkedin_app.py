@@ -401,14 +401,5 @@ def main():
         st.metric("Recall (class = user)", f"{recall:.1%}")
         st.metric("F1 Score", f"{f1:.1%}")
 
-        st.markdown("#### Confusion Matrix")
-        cm_df = pd.DataFrame(
-            cm,
-            columns=["Predicted non-user", "Predicted user"],
-            index=["Actual non-user", "Actual user"],
-        )
-        st.dataframe(cm_df)
-
-
 if __name__ == "__main__":
     main()
